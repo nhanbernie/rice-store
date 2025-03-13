@@ -1,0 +1,29 @@
+{
+  "semi": false,
+  "singleQuote": false,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "printWidth": 100,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": false,
+  "proseWrap": "never",
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": ["*.svg"],
+      "options": {
+        "printWidth": 0,  
+        "bracketSpacing": false,  
+        "singleQuote": false  
+      }
+    }
+  ]
+}

@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default {
-  darkMode: "class",
+  darkMode: 'class',
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -13,11 +13,9 @@ export default {
       //   background: "var(--background)",
       //   foreground: "var(--foreground)",
       // },
-      primary: {
-
-      },
+      primary: {},
       transitionProperty: {
-        'colors': 'background-color, color, border-color', 
+        colors: 'background-color, color, border-color',
       },
       transitionDuration: {
         DEFAULT: '300ms',
@@ -25,4 +23,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config

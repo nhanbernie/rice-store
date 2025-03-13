@@ -20,7 +20,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/messages/*": ["./src/constants/messages/*"]
+      "@/messages/*": ["./src/constants/messages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@models/*": ["./src/models/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
