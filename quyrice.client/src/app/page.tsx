@@ -1,12 +1,16 @@
-import ThemeToggleButton from "@/components/ThemeToggleButton";
+import HeroSession from '@/components/hero-session/HeroSession'
+import { Body, MainLayout } from './layouts'
 
-export default function Home() {
+const Home = () => {
   return (
-      <div className="min-h-screen bg-white dark:bg-black flex flex-col items-center justify-center">
-        <h1 className="text-4xl text-black dark:text-white mb-4">
-          Chào mừng bạn đến với Rice Store
-        </h1>
-        <ThemeToggleButton />
-      </div>
-  );
+    <>
+      <MainLayout>
+        <Body>
+          <HeroSession />
+        </Body>
+      </MainLayout>
+    </>
+  )
 }
+
+export default Home

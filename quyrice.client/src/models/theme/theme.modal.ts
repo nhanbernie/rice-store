@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 export interface ThemeContextType {
-  theme: 'light' | 'dark';
-  toggleTheme: () => void;
+  theme: 'light' | 'dark'
+  toggleTheme: () => void
 }
 
 export interface ThemeProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
