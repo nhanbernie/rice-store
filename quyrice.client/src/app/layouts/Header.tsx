@@ -12,7 +12,9 @@ const Header = () => {
       id="custom-header"
       className="bg-white dark:bg-zinc-900 dark:text-white text-[#292929] shadow-md w-full z-50 sticky top-0 bg-opacity-90 rounded-2xl"
     >
-      <div className={`container mx-auto max-w-screen-2xl w-full flex items-center justify-between py-5`}>
+      <div
+        className={`container mx-auto max-w-screen-2xl w-full flex items-center justify-between py-5`}
+      >
         {/* Logo */}
         <div className="text-2xl dark:text-white text-black font-bold w-2/12">
           <Link href="/">Rice</Link>
@@ -48,8 +50,8 @@ const Header = () => {
           </Link>
           {/* Theme Toggle */}
           <div className="flex justify-center items-center space-x-4">
-            <CommonButton srcImg="/images/account.svg" altImg="Account" className="" />
-            <CommonButton srcImg='/images/shop.svg' altImg='Shop' />
+            <CommonButton idIcon="icon-shop" className="w-5 h-5 text-black" />
+            <CommonButton idIcon="icon-shopping-cart" className="w-5 h-5 text-black" />
             <ThemeToggleButton />
           </div>
         </nav>

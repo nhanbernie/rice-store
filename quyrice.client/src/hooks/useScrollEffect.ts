@@ -13,11 +13,12 @@ const useScrollEffect = (headerId: string) => {
       } else {
         header.classList.remove('border-b', 'border-gray-300', 'dark:border-gray-700', 'shadow-md')
       }
-      window.addEventListener('scroll', handleScroll)
+    }
 
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [headerId])
 }
