@@ -23,4 +23,5 @@ body {
   height: 100%;
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
   scroll-behavior: smooth;
+  line-height: 1.5;
 }

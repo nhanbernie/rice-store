@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import { SeoItems } from '@/models/seo/seo.model'
+import { SeoItems } from '@/common/models/seo/seo.model'
 
 const SEO: React.FC<SeoItems> = ({
   title,

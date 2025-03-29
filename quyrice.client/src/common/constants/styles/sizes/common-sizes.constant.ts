@@ -7,17 +7,18 @@ export const COMMON_SIZE = {
   PX_2: 'px-2',
   PY: 'py-8',
   BOTTOM_WIDTH: 'mb-8',
-  GAP: 'gap-6'
-};
+  GAP: 'gap-6',
+  TITLE_TO_CONTENT: 'mb-10',
+}
 
 export const COMMON_FONT = {
   FONT_BOLD: 'font-bold',
   FONT_EXTRABOLD: 'font-extrabold',
   FONT_SEMIBOLD: 'font-semibold',
-  FONT_MEDIUM: 'font-medium'
-};
+  FONT_MEDIUM: 'font-medium',
+}
 
 export const DEFAULT_ICON_SIZE = {
   WIDTH: 13,
-  HEIGHT: 13
-};
+  HEIGHT: 13,
+}

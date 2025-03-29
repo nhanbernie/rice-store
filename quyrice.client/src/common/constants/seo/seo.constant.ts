@@ -1,4 +1,4 @@
-import { SeoType } from '@/models/seo/seo.model'
+import { SeoType } from '@/common/models/seo/seo.model'
 
 export const SEO: SeoType = {
   login: {
