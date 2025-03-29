@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-y
 :root {
   --background: #ffffff;
   --primary-green: #2f663c;
@@ -24,4 +23,10 @@ body {
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
   scroll-behavior: smooth;
   line-height: 1.5;
+
+  ::selection {
+    background-color: #889a93;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #d7dddb;
+  }
 }
