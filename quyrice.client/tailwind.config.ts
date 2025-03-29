@@ -23,4 +23,5 @@ export default {
     },
   },
   plugins: [],
+  safelist: ['bg-red-300', 'hover:bg-red-600', 'text-white', 'text-gray-900', 'text-gray-700'],
 } satisfies Config
