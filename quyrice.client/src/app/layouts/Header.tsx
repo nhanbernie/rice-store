@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
 import CommonButton from '@/components/button/CommonButton'
+import { HEADER_SIZE } from '@/common/constants/styles/sizes/header-sizes.constant'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,13 +11,14 @@ const Header = () => {
   return (
     <header
       id="custom-header"
-      className="bg-white dark:bg-zinc-900 dark:text-white text-[#292929] shadow-md w-full z-50 sticky top-0 bg-opacity-90 rounded-2xl"
+      className="bg-white dark:bg-zinc-900 dark:text-white text-[#292929] shadow-lg w-full z-50 sticky top-0 bg-opacity-90 rounded-3xl"
     >
+      {/* Web */}
       <div
-        className={`container mx-auto max-w-screen-2xl w-full flex items-center justify-between py-5`}
+        className={`flex justify-between items-center w-full px-8 sm:px-24 ${HEADER_SIZE.PADDING_X} py-5`}
       >
         {/* Logo */}
-        <div className="text-2xl dark:text-white text-black font-bold w-2/12">
+        <div className="w-2/12 text-2xl dark:text-white text-black font-bold">
           <Link href="/">Rice</Link>
         </div>
 
@@ -48,15 +50,15 @@ const Header = () => {
           <Link href="/contact" className="hover:text-[#2f663c] transition-colors">
             Contact
           </Link>
-          {/* Theme Toggle */}
-          <div className="flex justify-center items-center space-x-4">
-            <CommonButton idIcon="icon-shop" className="w-5 h-5 text-black" />
-            <CommonButton idIcon="icon-shopping-cart" className="w-5 h-5 text-black" />
-            <ThemeToggleButton />
-          </div>
         </nav>
+        {/* Theme Toggle */}
+        <div className="justify-center items-center space-x-4 hidden md:flex">
+          <CommonButton idIcon="icon-shopping-cart" className="w-5 h-5 text-black" />
+          <CommonButton idIcon="icon-account" className="w-5 h-5 text-black" />
+          <ThemeToggleButton />
+        </div>
 
-        {/* Hamburger Button - Mobile */}
+        {/* Mobile Button */}
         <button
           className="md:hidden focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}

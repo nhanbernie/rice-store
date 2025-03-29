@@ -1,5 +1,5 @@
-import { SocialType } from '@/models/footer/social.model'
-import { AddressType } from '@/models/footer/social.model'
+import { SocialType } from '@/common/models/footer/social.model'
+import { AddressType } from '@/common/models/footer/social.model'
 
 export const socialLinks: SocialType[] = [
   {

@@ -1,13 +1,14 @@
-import { socialLinks } from '@/constants/footer/social.constant'
-import { addressData } from '@/constants/footer/social.constant'
-import { COMMON_SIZE } from '@/constants/styles/sizes/common-sizes.constant'
+import { socialLinks } from '@/common/constants/footer/social.constant'
+import { addressData } from '@/common/constants/footer/social.constant'
+import { COMMON_SIZE } from '@/common/constants/styles/sizes/common-sizes.constant'
+import Icon from '@/components/icons/Icon'
 
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-[#292929] rounded-t-2xl">
       <div className={`${COMMON_SIZE.MAX_WIDTH} w-full lg:${COMMON_SIZE.PY}`}>
         {/* Top footer */}
-        <div className="container lg:mx-auto px-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="container mx-auto max-sm:px-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="mb-6 md:mb-0">
             <h1 className="font-extrabold md:text-4xl mb-16 dark:text-white text-3xl">
               How to reach us
@@ -15,10 +16,15 @@ const Footer = () => {
             <div className="grid grid-cols-1 gap-8 sm:gap-6">
               {addressData.map((data, index) => (
                 <div key={index} className="mb-6">
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  <h2 className="mb-1 text-sm font-bold text-gray-900 uppercase dark:text-white">
                     {data.title}
                   </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <p>For question about my service</p>
+                  <div className='flex items-center mt-2 space-x-2'>
+                    <Icon id="icon-mail" className="h-6 w-6 text-green-900" />
+                    <p>ricestore@gmail.com</p>
+                  </div>
+                  {/* <ul className="text-gray-500 dark:text-gray-400 font-medium">
                     <li className="mb-4">
                       <a href="https://flowbite.com/" className="hover:underline">
                         Flowbite
@@ -29,7 +35,7 @@ const Footer = () => {
                         Tailwind CSS
                       </a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
               ))}
             </div>

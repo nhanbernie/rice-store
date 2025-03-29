@@ -1,5 +1,5 @@
-import { IconType } from '@/models/icons/icon.model'
-import { DEFAULT_ICON_SIZE } from '@/constants/styles/sizes/common-sizes.constant'
+import { IconType } from '@/common/models/icons/icon.model'
+import { DEFAULT_ICON_SIZE } from '@/common/constants/styles/sizes/common-sizes.constant'
 
 const Icon = ({
   id,

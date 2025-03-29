@@ -1,4 +1,4 @@
-import { ChildrenProps } from '@/models/common/common.model'
+import { ChildrenProps } from '@/common/models/common/common.model'
 
 const Body = ({ children }: ChildrenProps) => {
   return (

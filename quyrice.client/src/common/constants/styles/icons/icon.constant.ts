@@ -1,0 +1,17 @@
+export const COMMON_ICON = {
+  IconSearch: 'icon-search',
+  IconShop: 'icon-shop',
+  IconShoppingCart: 'icon-shopping-cart',
+  IconEmail: 'icon-email',
+  IconFacebook: 'icon-facebook',
+  IconPhone: 'icon-phone',
+  IconPlus: 'icon-plus',
+  IconHeart: 'icon-heart',
+  IconAccount: 'icon-account',
+  IconStar: 'icon-star',
+  IconMinus: 'icon-minus',
+  IconChefHat: 'icon-chef-hat',
+  IconDelivery: 'icon-delivery',
+  IconMail: 'icon-mail',
+  IconCall: 'icon-call',
+}

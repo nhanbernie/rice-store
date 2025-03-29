@@ -1,15 +1,18 @@
+"use server"
 import HeroSession from '@/components/hero-session/HeroSession'
-import { Body, MainLayout } from './layouts'
+import { Body } from './layouts'
+import ServiceHomepage from '@/components/service/ServiceHomepage'
+import ProductCard from '@/components/product-card/ProductCard'
 
 const Home = () => {
   return (
-    <>
-      <MainLayout>
-        <Body>
-          <HeroSession />
-        </Body>
-      </MainLayout>
-    </>
+    <Body>
+      <div>
+        <HeroSession />
+        <ServiceHomepage />
+        <ProductCard />
+      </div>
+    </Body>
   )
 }
 

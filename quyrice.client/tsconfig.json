@@ -20,9 +20,12 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/messages/*": ["./src/constants/messages/*"],
+      "@/messages/*": ["./src/common/constants/messages/*"],
+      "@/sizes/*": ["./src/common/constants/styles/sizes/*"],
+      "@/colors/*": ["./src/common/constants/styles/colors/*"],
       "@/components/*": ["./src/components/*"],
-      "@models/*": ["./src/models/*"],
+      "@/models/*": ["./src/common/models/*"],
+      "@/motions/*": ["./src/components/aminations/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
