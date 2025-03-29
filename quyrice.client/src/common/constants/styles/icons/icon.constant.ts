@@ -14,4 +14,5 @@ export const COMMON_ICON = {
   IconDelivery: 'icon-delivery',
   IconMail: 'icon-mail',
   IconCall: 'icon-call',
+  IconMap: 'icon-map',
 }

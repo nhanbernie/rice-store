@@ -1,4 +1,4 @@
-"use server"
+'use server'
 import HeroSession from '@/components/hero-session/HeroSession'
 import { Body } from './layouts'
 import ServiceHomepage from '@/components/service/ServiceHomepage'

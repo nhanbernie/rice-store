@@ -23,6 +23,7 @@
       "@/messages/*": ["./src/common/constants/messages/*"],
       "@/sizes/*": ["./src/common/constants/styles/sizes/*"],
       "@/colors/*": ["./src/common/constants/styles/colors/*"],
+      "@/icons/*": ["./src/common/constants/styles/icons/*"],
       "@/components/*": ["./src/components/*"],
       "@/models/*": ["./src/common/models/*"],
       "@/motions/*": ["./src/components/aminations/*"]

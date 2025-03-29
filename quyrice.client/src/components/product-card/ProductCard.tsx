@@ -40,8 +40,8 @@ const ProductCard = () => {
             {/* Favourite Button */}
             <CommonButton
               idIcon="icon-heart"
-              styleButton="absolute top-8 right-8 z-20"
-              className="w-8 h-8 text-white"
+              styleButton="absolute top-8 right-8 z-20 px-0 py-0"
+              className="w-8 h-8 mr-0 text-white"
               {...hoverButton}
               {...tapScale}
             />

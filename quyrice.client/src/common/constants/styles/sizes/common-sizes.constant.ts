@@ -1,4 +1,8 @@
 export const COMMON_SIZE = {
+  SPACE_TOP: 'mt-16',
+  SPACE_TOP_LARGE: 'mt-28',
+  SPACE_TOP_BOTTOM: 'my-16',
+  SPACE_BOTTOM: 'mb-16',
   MAX_WIDTH: 'max-w-screen-2xl mx-auto',
   WIDTH: 'w-full',
   CONTAINER: 'container mx-auto',
