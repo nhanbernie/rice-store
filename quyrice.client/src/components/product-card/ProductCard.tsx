@@ -1,5 +1,3 @@
-'use server'
-
 import { COLOR_BUTTON, COLOR_CARD } from '@/colors/common-color.constant'
 import { COMMON_SIZE } from '@/sizes/common-sizes.constant'
 import Icon from '../icons/Icon'
@@ -14,7 +12,9 @@ import { TitleMotion, BlockMotion } from '@/motions/index'
 import ImgMotion from '../aminations/ImgMotion'
 import CommonButton from '@/components/button/CommonButton'
 
-const ProductCard = () => {
+const ProductCard = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+
   return (
     <div className="mb-16">
       <TitleMotion

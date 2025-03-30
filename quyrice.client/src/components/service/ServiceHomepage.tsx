@@ -1,7 +1,9 @@
 import { COMMON_SIZE } from '@/common/constants/styles/sizes/common-sizes.constant'
 import Icon from '../icons/Icon'
 
-const ServiceHomepage = () => {
+const ServiceHomepage = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+  
   return (
     <div className="container mx-auto mb-16">
       {/* container items */}
