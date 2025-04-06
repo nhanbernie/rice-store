@@ -10,15 +10,13 @@ import ServiceHomepageSkeleton from '@/components/loading/ServiceHomepageSkeleto
 const Home = () => {
   return (
     <Body>
-      <div>
-        <HeroSession />
-        <Suspense fallback={<ServiceHomepageSkeleton />}>
-          <ServiceHomepage />
-        </Suspense>
-        <Suspense fallback={<ProductCardSkeleton />}>
-          <ProductCard />
-        </Suspense>
-      </div>
+      <HeroSession />
+      <Suspense fallback={<ServiceHomepageSkeleton />}>
+        <ServiceHomepage />
+      </Suspense>
+      <Suspense fallback={<ProductCardSkeleton />}>
+        <ProductCard />
+      </Suspense>
     </Body>
   )
 }

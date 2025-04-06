@@ -1,11 +1,7 @@
 import { ChildrenProps } from '@/common/models/common/common.model'
 
 const Body = ({ children }: ChildrenProps) => {
-  return (
-    <main className={`mx-auto max-w-screen-2xl w-full`}>
-      <div className="container mx-auto">{children}</div>
-    </main>
-  )
+  return <div className="container w-full mx-auto">{children}</div>
 }
 
 export default Body
