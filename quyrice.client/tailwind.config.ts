@@ -20,6 +20,21 @@ export default {
   },
   plugins: [],
   safelist: [
+    // ⚙️ (Flex)
+    'flex',
+    'items-center',
+    'justify-center',
+
+    // ⚙️ (Gap)
+    'gap-2',
+
+    // 📏 (Border Radius)
+    'rounded-full',
+    'rounded-lg',
+    'rounded-xl',
+    'rounded-3xl',
+    'rounded-[50px]',
+
     // 🎨 (Background Colors)
     'bg-red-300',
     'hover:bg-red-600',

@@ -17,13 +17,15 @@ const CommonButton: React.FC<ButtonProps> = ({
   return (
     <motion.button
       onClick={onClick}
-      className={`flex items-center justify-center gap-2 rounded-xl px-2 py-2 ${styleButton}`}
+      className={`${
+        styleButton ? styleButton : 'flex items-center justify-center gap-2 rounded-xl px-2 py-2'
+      }`}
       variants={variants}
       initial="initial"
       animate="animate"
       {...rest}
     >
-      {idIcon && <Icon id={idIcon} className={`mr-2 rounded-lg ${className}`} />}
+      {idIcon && <Icon id={idIcon} className={`${className ? className : 'mr-2 rounded-lg'}`} />}
       {text}
     </motion.button>
   )

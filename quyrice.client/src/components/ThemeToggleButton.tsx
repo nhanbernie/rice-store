@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import { useTheme } from '@/contexts/themeContext'
 import Icon from './icons/Icon'
