@@ -5,6 +5,7 @@ import ThemeToggleButton from '@/components/ThemeToggleButton'
 import CommonButton from '@/components/button/CommonButton'
 import { HEADER_SIZE } from '@/common/constants/styles/sizes/header-sizes.constant'
 import { usePathname } from 'next/navigation'
+import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const pathName = usePathname()
@@ -31,12 +32,12 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="w-full max-w-xs px-4 rounded-2xl  border-none focus:outline-none focus:ring-1 focus:ring-[#2f663c] "
+            className="w-full max-w-xs px-4 rounded-2xl  border-none focus:outline-none focus:ring-1 focus:ring-[#2f663c]"
           />
           <CommonButton
-            srcImg="/images/search.svg"
-            altImg="search"
-            className="hover:bg-[#2f663c]"
+            idIcon={COMMON_ICON.IconSearch}
+            className="hover:bg-[#2f663c] transition-all duration-300"
+            styleButton="rounded-none"
           />
         </div>
 
@@ -54,8 +55,14 @@ const Header = () => {
         </nav>
         {/* Theme Toggle */}
         <div className="justify-center items-center space-x-4 hidden md:flex">
-          <CommonButton idIcon="icon-shopping-cart" className="w-5 h-5 text-black" />
-          <CommonButton idIcon="icon-account" className="w-5 h-5 text-black" />
+          <CommonButton
+            idIcon="icon-shopping-cart"
+            className="w-5 h-5 text-black dark:text-white mr-2"
+          />
+          <CommonButton
+            idIcon="icon-account"
+            className="w-5 h-5 text-black dark:text-white mr-2"
+          />
           <ThemeToggleButton />
         </div>
 
