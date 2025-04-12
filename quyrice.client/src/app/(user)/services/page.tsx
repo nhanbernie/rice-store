@@ -22,7 +22,7 @@ const Service = () => {
           <p className="text-3xl mt-4 opacity-60">We provide a wide range of services</p>
           <CommonButton
             text="Read more"
-            styleButton="mt-10 px-3 text-white bg-[#A3B18A] opacity-80 hover:opacity-100"
+            styleButton="gap-2 rounded-xl py-2 mt-10 px-3 text-white bg-[#A3B18A] opacity-80 hover:opacity-100"
             {...hoverButton}
           />
         </div>
