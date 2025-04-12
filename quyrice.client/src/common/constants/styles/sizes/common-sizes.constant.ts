@@ -1,6 +1,6 @@
 export const COMMON_SIZE = {
-  SPACE_TOP: 'mt-16',
-  SPACE_TOP_LARGE: 'mt-28',
+  SPACE_TOP: 'pt-16',
+  SPACE_TOP_LARGE: 'pt-28',
   SPACE_TOP_BOTTOM: 'my-16',
   SPACE_BOTTOM: 'mb-16',
   MAX_WIDTH: 'max-w-screen-2xl mx-auto',
@@ -13,6 +13,8 @@ export const COMMON_SIZE = {
   BOTTOM_WIDTH: 'mb-8',
   GAP: 'gap-6',
   TITLE_TO_CONTENT: 'mb-10',
+
+  TEXT_HEADING: 'text-3xl',
 }
 
 export const COMMON_FONT = {

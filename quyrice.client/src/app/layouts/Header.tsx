@@ -4,14 +4,18 @@ import Link from 'next/link'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
 import CommonButton from '@/components/button/CommonButton'
 import { HEADER_SIZE } from '@/common/constants/styles/sizes/header-sizes.constant'
-
+import { usePathname } from 'next/navigation'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const pathName = usePathname()
+  const isServiesPage = pathName === '/services'
 
   return (
     <header
       id="custom-header"
-      className="bg-white dark:bg-zinc-900 dark:text-white text-[#292929] shadow-lg w-full z-50 sticky top-0 bg-opacity-90 rounded-3xl"
+      className={`${
+        isServiesPage && 'backdrop-blur-md bg-white/40'
+      } fixed left-0 right-0 top-0 m-auto max-w-screen-2xl w-full z-50 bg-white dark:bg-zinc-900 dark:text-white text-[#292929] shadow-lg bg-opacity-90 rounded-3xl`}
     >
       {/* Web */}
       <div
@@ -40,9 +44,6 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-12 w-6/12 justify-center font-semibold">
           <Link href="/" className="hover:text-[#2f663c] transition-colors">
             Home
-          </Link>
-          <Link href="/about" className="hover:text-[#2f663c] transition-colors">
-            About
           </Link>
           <Link href="/services" className="hover:text-[#2f663c] transition-colors">
             Services
@@ -135,7 +136,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Overlay khi mở sidebar */}
+      {/* Overlay when open sidebar */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 md:hidden z-40"

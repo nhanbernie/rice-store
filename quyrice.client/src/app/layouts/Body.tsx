@@ -1,3 +1,4 @@
+'use client'
 import { ChildrenProps } from '@/common/models/common/common.model'
 
 const Body = ({ children }: ChildrenProps) => {

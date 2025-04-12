@@ -1,11 +1,13 @@
 'use client'
+import { COMMON_SIZE } from '@/sizes/common-sizes.constant'
 import { motion } from 'framer-motion'
 import React from 'react'
-import Image from 'next/image'
 
 const HeroSession: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between mt-16 mb-24">
+    <section
+      className={`flex flex-col md:flex-row items-center justify-between ${COMMON_SIZE.SPACE_TOP} mb-24`}
+    >
       <motion.div
         className="w-full md:w-2/5 text-center md:text-left"
         initial={{ x: -50, opacity: 0 }}

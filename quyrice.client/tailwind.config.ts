@@ -23,18 +23,24 @@ export default {
     // 🎨 (Background Colors)
     'bg-red-300',
     'hover:bg-red-600',
+    'bg-white/60',
 
     // 🎨 (Text Colors)
     'text-white',
     'text-gray-900',
     'text-gray-700',
+    'text-3xl',
 
     // 📏 (Spacing)
     'my-16',
     'mb-16',
     'mx-auto',
     'mt-28',
-    'mt-16',  
+    'mt-16',
+    'pt-16',
+    'pt-28',
+    'mt-[76px]',
+    'mt-0',
 
     // 📐 (Width & Max Width)
     'w-full',
@@ -47,5 +53,7 @@ export default {
     'font-medium',
 
     'lg:mt-28',
+
+    'backdrop-blur-md',
   ],
 } satisfies Config

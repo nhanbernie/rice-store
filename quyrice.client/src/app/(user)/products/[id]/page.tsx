@@ -1,15 +1,16 @@
 'use server'
 
+import { Body } from '@/app/layouts'
 import CommonButton from '@/components/button/CommonButton'
 import Icon from '@/components/icons/Icon'
 import ProductCard from '@/components/product-card/ProductCard'
 
 const ProductDetail = () => {
   return (
-    <div>
-      <div className="flex flex-col md:flex-row md:px-24 px-6 mb-10 mt-16">
+    <Body>
+      <div className="flex flex-col md:flex-row md:px-24 px-6 mb-10 pt-16">
         {/* right side */}
-        <div className="fl                                                                                                          ex flex-1 flex-col px-6">
+        <div className="flex flex-1 flex-col px-6">
           <div className="flex flex-col">
             {/* image */}
             <div className=""></div>
@@ -93,7 +94,7 @@ const ProductDetail = () => {
         </div>
       </div>
       <ProductCard />
-    </div>
+    </Body>
   )
 }
 

@@ -24,6 +24,7 @@
       "@/sizes/*": ["./src/common/constants/styles/sizes/*"],
       "@/colors/*": ["./src/common/constants/styles/colors/*"],
       "@/icons/*": ["./src/common/constants/styles/icons/*"],
+      "@/styles/*": ["./src/common/constants/styles/*"],
       "@/components/*": ["./src/components/*"],
       "@/models/*": ["./src/common/models/*"],
       "@/motions/*": ["./src/components/aminations/*"]

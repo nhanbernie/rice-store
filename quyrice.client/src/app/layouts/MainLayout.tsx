@@ -6,16 +6,17 @@ import { usePathname } from 'next/navigation'
 
 const MainLayout = ({ children }: ChildrenProps) => {
   const pathName = usePathname()
+  const isServiesPage = pathName === '/services'
 
   return (
-    <div
-      className={`flex flex-col flex-wrap min-h-screen${
-        pathName === '/services' ? ' relative' : ''
-      }`}
-    >
-      <div className="container max-w-screen-2xl mx-auto">
+    <div className="flex flex-col flex-wrap min-h-screen">
+      <div className={`${isServiesPage ? 'w-full' : 'container max-w-screen-2xl mx-auto'}`}>
         <Header />
-        <main className="flex-grow max-sm:px-4">{children}</main>
+        <main
+          className={`flex-grow max-sm:px-4 ${pathName !== '/services' ? 'mt-[76px]' : 'mt-0'}`}
+        >
+          {children}
+        </main>
         {pathName !== '/contact' && <Footer />}
       </div>
     </div>
