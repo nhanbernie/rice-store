@@ -2,6 +2,7 @@
 
 import { Body } from '@/app/layouts'
 import CommonButton from '@/components/button/CommonButton'
+import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
 import Icon from '@/components/icons/Icon'
 import ProductCard from '@/components/product-card/ProductCard'
 
@@ -32,19 +33,19 @@ const ProductDetail = () => {
                     {[...Array(4)].map((_, index) => (
                       <Icon
                         key={index}
-                        id="icon-star"
+                        id={COMMON_ICON.StarIcon}
                         className="w-3 h-3 mr-1 fill-current text-yellow-500"
                       />
                     ))}
                     <Icon
-                      id="icon-star"
+                      id={COMMON_ICON.StarIcon}
                       className="w-3 h-3 fill-current text-yellow-500 [clip-path:inset(0_50%_0_0)]"
                     />
                   </div>
                 </div>
                 <div>
                   <div className="rounded-full border-slate-200 border-[1px] p-2 hover:cursor-pointer hover:bg-slate-200 transition-all">
-                    <Icon id="icon-heart" className="w-5 h-5" />
+                    <Icon id={COMMON_ICON.HeartIcon} className="w-5 h-5" />
                   </div>
                 </div>
               </div>
@@ -60,11 +61,11 @@ const ProductDetail = () => {
                 <span className="font-semibold">Quantity</span>
                 <div className="flex flex-row items-center bg-[#F2F4F5] rounded-lg overflow-hidden shadow-lg">
                   <div className="flex items-center h-full w-full cursor-pointer hover:bg-zinc-300 transition-all px-2">
-                    <Icon id="icon-minus" className="" />
+                    <Icon id={COMMON_ICON.MinusIcon} className="" />
                   </div>
                   <p className="px-2 text-xs">1</p>
                   <div className="flex items-center h-full w-full cursor-pointer hover:bg-zinc-300 transition-all px-2">
-                    <Icon id="icon-plus" className="" />
+                    <Icon id={COMMON_ICON.PlusIcon} className="" />
                   </div>
                 </div>
               </div>

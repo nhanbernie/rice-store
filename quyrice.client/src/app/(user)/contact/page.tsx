@@ -19,7 +19,7 @@ const Contact = () => {
               <div key={index} className="flex flex-row items-end mb-5">
                 <Icon
                   className="h-8 w-8 mr-4 fill-current text-green-800"
-                  id={COMMON_ICON.IconFacebook}
+                  id={COMMON_ICON.FacebookIcon}
                 />
                 <p className="text-lg text-gray-500">facebook.com/QuyRice</p>
               </div>

@@ -39,7 +39,7 @@ const ProductCard = async () => {
 
             {/* Favourite Button */}
             <CommonButton
-              idIcon="icon-heart"
+              idIcon="heart-icon"
               styleButton="absolute top-8 right-8 z-20 px-0 py-0"
               className="w-8 h-8 mr-0 text-white"
               {...hoverButton}
@@ -69,7 +69,7 @@ const ProductCard = async () => {
             <button
               className={`absolute rounded-full p-3 ${COLOR_BUTTON.ADD_PRODUCT} ${COLOR_BUTTON.HOVER_ADD_PRODUCT} bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition duration-300 shadow-2x`}
             >
-              <Icon className="w-7 h-7 text-white" id="icon-plus" />
+              <Icon className="w-7 h-7 text-white" id="plus-icon" />
             </button>
           </BlockMotion>
         ))}

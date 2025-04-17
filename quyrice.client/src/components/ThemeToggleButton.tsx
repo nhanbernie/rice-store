@@ -9,7 +9,7 @@ const ThemeToggleButton = () => {
 
   return (
     <button onClick={toggleTheme} className="p-1 rounded-md transition-colors duration-300">
-      <Icon id={COMMON_ICON.IconSun} className="w-5 h-5 dark:text-white text-black" />
+      <Icon id={COMMON_ICON.SunIcon} className="w-5 h-5 dark:text-white text-black" />
     </button>
   )
 }

@@ -30,7 +30,7 @@ const Service = () => {
         {/* <div className="service-intro flex space-x-10 py-14 px-14 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-[#A3B18A] text-white transition duration-300">
           {[...Array(4).keys()].map((item) => (
             <div key={item} className="flex flex-col justify-center items-center">
-              <Icon id={COMMON_ICON.IconDelivery} className="w-10 h-10 text-white" />
+              <Icon id={COMMON_ICON.DeliveryIcon} className="w-10 h-10 text-white" />
               <p>SHIPING</p>
             </div>
           ))}
@@ -81,7 +81,7 @@ const Service = () => {
                   className="flex flex-col text-center text-black rounded-3xl shadow-[0_35px_35px_rgba(0,0,0,0.12)] hover:shadow-neutral-400 xl:p-16 max-xl:mb-10 p-20 transition-all duration-500 ease-in-out"
                 >
                   <div className="flex justify-center mb-4">
-                    <Icon id={COMMON_ICON.IconDelivery} className="w-24 h-24 text-white" />
+                    <Icon id={COMMON_ICON.DeliveryIcon} className="w-24 h-24 text-white" />
                   </div>
                   <h2 className="text-3xl font-semibold mb-6">Payment</h2>
                   <p>
@@ -117,7 +117,7 @@ const Service = () => {
               START YOUR NEW <span className="text-green-900">ADVANTURE</span> <br />
               AROUND THE WORLD
             </h1>
-            <div className='w-1/4'>
+            <div className="w-1/4">
               <p className="">
                 There are still many amazing destinations scattered around the world, you should try
                 to visit all of them

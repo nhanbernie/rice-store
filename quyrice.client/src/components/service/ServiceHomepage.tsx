@@ -3,7 +3,7 @@ import Icon from '../icons/Icon'
 
 const ServiceHomepage = async () => {
   await new Promise((resolve) => setTimeout(resolve, 2000))
-  
+
   return (
     <div className="container mx-auto mb-16">
       {/* container items */}
@@ -13,7 +13,7 @@ const ServiceHomepage = async () => {
           {[...Array(3)].map((_, index) => (
             <div key={index} className="service-item flex flex-col items-start mr-10">
               <div className="mb-4">
-                <Icon id="icon-chef-hat" className="w-10 h-10 text-green-900" />
+                <Icon id="chef-hat-icon" className="w-10 h-10 text-green-900" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Gạo Sạch</h3>
               <p className="text-gray-600">Cung cấp gạo chất lượng, không hóa chất. </p>
