@@ -1,6 +1,7 @@
 import { socialLinks } from '@/common/constants/footer/social.constant'
 import { addressData } from '@/common/constants/footer/social.constant'
 import { COMMON_SIZE } from '@/common/constants/styles/sizes/common-sizes.constant'
+import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
 import Icon from '@/components/icons/Icon'
 
 const Footer = () => {
@@ -20,8 +21,8 @@ const Footer = () => {
                     {data.title}
                   </h2>
                   <p>For question about my service</p>
-                  <div className='flex items-center mt-2 space-x-2'>
-                    <Icon id="icon-mail" className="h-6 w-6 text-green-900" />
+                  <div className="flex items-center mt-2 space-x-2">
+                    <Icon id={COMMON_ICON.MailIcon} className="h-6 w-6 text-green-900" />
                     <p>ricestore@gmail.com</p>
                   </div>
                   {/* <ul className="text-gray-500 dark:text-gray-400 font-medium">

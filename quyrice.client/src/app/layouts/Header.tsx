@@ -35,7 +35,7 @@ const Header = () => {
             className="w-full max-w-xs px-4 rounded-2xl  border-none focus:outline-none focus:ring-1 focus:ring-[#2f663c]"
           />
           <CommonButton
-            idIcon={COMMON_ICON.IconSearch}
+            idIcon={COMMON_ICON.SearchIcon}
             className="hover:bg-[#2f663c] transition-all duration-300"
             styleButton="rounded-none"
           />
@@ -56,13 +56,10 @@ const Header = () => {
         {/* Theme Toggle */}
         <div className="justify-center items-center space-x-4 hidden md:flex">
           <CommonButton
-            idIcon="icon-shopping-cart"
+            idIcon="shopping-cart-icon"
             className="w-5 h-5 text-black dark:text-white mr-2"
           />
-          <CommonButton
-            idIcon="icon-account"
-            className="w-5 h-5 text-black dark:text-white mr-2"
-          />
+          <CommonButton idIcon="account-icon" className="w-5 h-5 text-black dark:text-white mr-2" />
           <ThemeToggleButton />
         </div>
 
