@@ -49,7 +49,8 @@ export default {
     // 📏 (Spacing)
     'my-16',
     'mb-16',
-    'mx-auto',
+    'mx-auto',  
+    'mt-1',
     'mt-28',
     'mt-16',
     'pt-16',
