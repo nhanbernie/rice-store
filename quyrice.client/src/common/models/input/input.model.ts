@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface IInputFieldProps {
-  name: string
+  name?: string
   label?: string
   type?: string
   placeholder?: string
