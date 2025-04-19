@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { IAuthPageProps } from '@/common/models/auth/auth.model'
+import AuthFooterLinks from './AuthFooterLinks'
 
 const AuthPage = ({ children }: IAuthPageProps) => {
   return (
@@ -18,12 +19,8 @@ const AuthPage = ({ children }: IAuthPageProps) => {
           {/* Auth Form */}
           {children}
 
-          <p className="text-sm text-gray-500 mt-6">
-            Already have an account?{' '}
-            <a href="#" className="font-semibold text-black">
-              Log in
-            </a>
-          </p>
+          {/* Auth Footer Link */}
+          <AuthFooterLinks />
         </div>
 
         {/* Auth Banner Form */}

@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 
 const CommonButton: React.FC<ButtonProps> = ({
   idIcon,
+  type,
   text,
   onClick,
   className,
@@ -16,6 +17,7 @@ const CommonButton: React.FC<ButtonProps> = ({
 }) => {
   return (
     <motion.button
+      type={type}
       onClick={onClick}
       className={`${
         styleButton ? styleButton : 'flex items-center justify-center gap-2 rounded-xl px-2 py-2'
