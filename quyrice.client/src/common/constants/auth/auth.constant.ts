@@ -8,8 +8,8 @@ const commonFields: IInputFieldProps[] = [
 export const inputField = (type: 'register' | 'login' | 'forgotPassword'): IInputFieldProps[] => {
   const fields: Record<'register' | 'login' | 'forgotPassword', IInputFieldProps[]> = {
     register: [
-      ...commonFields,
       { label: 'Username', name: 'username', type: 'text', placeholder: 'Enter your username' },
+      ...commonFields,
       { label: 'Confirm Password', name: 'confirmPassword', type: 'password', placeholder: 'Confirm your password' }
     ],
     login: [...commonFields],
