@@ -59,7 +59,12 @@ const Header = () => {
             idIcon="shopping-cart-icon"
             className="w-5 h-5 text-black dark:text-white mr-2"
           />
-          <CommonButton idIcon="account-icon" className="w-5 h-5 text-black dark:text-white mr-2" />
+          <Link href="/login">
+            <CommonButton
+              idIcon="account-icon"
+              className="w-5 h-5 text-black dark:text-white mr-2"
+            />
+          </Link>
           <ThemeToggleButton />
         </div>
 
