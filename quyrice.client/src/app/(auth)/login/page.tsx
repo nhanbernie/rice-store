@@ -1,3 +1,12 @@
-export default function Login() {
-  return <div>Login</div>
+'use client'
+import { AuthForm, AuthPage } from '@/components/auth-page'
+
+export default function Register() {
+  return (
+    <AuthPage>
+      <div className="text-start">
+        <AuthForm type={'login'} />
+      </div>
+    </AuthPage>
+  )
 }
