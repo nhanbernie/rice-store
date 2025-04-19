@@ -1,4 +1,3 @@
-import { IInputFieldProps } from '@/common/models/input/input.model'
 import React from 'react'
 
 export interface IAuthPageProps {
@@ -13,5 +12,12 @@ export interface RegisterFormData {
 }
 
 export interface IAuthFormProps {
-  inputField: IInputFieldProps[]
+  type: 'login' | 'register' | 'forgotPassword'
+}
+
+export interface RegisterFormData {
+  username: string
+  email: string
+  password: string
+  confirmPassword: string
 }
