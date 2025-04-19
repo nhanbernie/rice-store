@@ -2,18 +2,14 @@ import FormProvider from '@/components/form/AuthProvider'
 import validatorSchema from '@/libs/validator/auth.validator'
 import InputField from '@/components/input/InputField'
 import { IAuthFormProps } from '@/common/models/auth/auth.model'
+import { inputField } from '@/common/constants/auth/auth.constant'
+import { InferType } from 'yup'
 
-const AuthForm = ({ inputField }: IAuthFormProps) => {
-  interface RegisterFormData {
-    username: string
-    email: string
-    password: string
-    confirmPassword: string
-  }
-  const onSubmit = async (data: RegisterFormData) => {
+const AuthForm = ({ type }: IAuthFormProps) => {
+  const onSubmit = async (data: InferType<typeof validatorSchema[typeof type]>) => {
     const dataRegister = {
-      name: data.username,
-      password: data.password,
+      name: 'username' in data ? data.username : undefined,
+      password: 'password' in data ? data.password : undefined,
       email: data.email,
     }
     try {
@@ -32,23 +28,21 @@ const AuthForm = ({ inputField }: IAuthFormProps) => {
   }
 
   return (
-    <div className="text-start">
-      <FormProvider onSubmit={onSubmit} validatorSchema={validatorSchema.register}>
-        <div className="">
-          {inputField.map((input) => (
-            <InputField
-              key={input.name}
-              name={input.name}
-              type={input.type}
-              placeholder={input.placeholder}
-            />
-          ))}
-        </div>
-        <button type="submit" className="w-full bg-green-900 text-white py-4 rounded-3xl">
-          Start
-        </button>
-      </FormProvider>
-    </div>
+    <FormProvider onSubmit={onSubmit} validatorSchema={validatorSchema[type]}>
+      <div className="">
+        {inputField(type).map((input) => (
+          <InputField
+            key={input.name}
+            name={input.name}
+            type={input.type}
+            placeholder={input.placeholder}
+          />
+        ))}
+      </div>
+      <button type="submit" className="w-full bg-green-900 text-white py-4 rounded-3xl">
+        Start
+      </button>
+    </FormProvider>
   )
 }
 
