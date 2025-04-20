@@ -46,7 +46,7 @@ const BackgroundLayer = () => {
 
 const IntroBanner = () => {
   return (
-    <div className="mb-10">
+    <div className="mb-5">
       <h1 className="text-2xl font-bold text-gray-800 mb-3">
         <span className="text-green-900">Gringo</span>
       </h1>
