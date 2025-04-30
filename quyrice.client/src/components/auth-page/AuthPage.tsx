@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { IAuthPageProps } from '@/common/models/auth/auth.model'
 import AuthFooterLinks from './AuthFooterLinks'
+import AuthLoginButton from '../button/AuthLoginButton'
 
 const AuthPage = ({ children }: IAuthPageProps) => {
   return (
@@ -14,6 +15,7 @@ const AuthPage = ({ children }: IAuthPageProps) => {
 
           {/* Auth login button */}
           <AuthLoginButton />
+
           <div className="text-gray-400 text-sm mb-4">or</div>
 
           {/* Auth Form */}
@@ -82,31 +84,6 @@ const AuthBanner = () => {
       <div className="absolute bottom-10 left-10 bg-white px-4 py-1 rounded-full text-sm font-semibold text-gray-800 shadow-md">
         Gringo Trail
       </div>
-    </div>
-  )
-}
-
-const AuthLoginButton = () => {
-  return (
-    <div className="flex items-center justify-center space-x-4 my-4">
-      <button className="bg-gray-100 p-2 rounded-full">
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"
-          className="w-5 h-5"
-        />
-      </button>
-      <button className="bg-gray-100 p-2 rounded-full">
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
-          className="w-5 h-5"
-        />
-      </button>
-      <button className="bg-gray-100 p-2 rounded-full">
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
-          className="w-5 h-5"
-        />
-      </button>
     </div>
   )
 }
