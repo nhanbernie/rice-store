@@ -15,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased bg-white dark:bg-black transition-colors duration-300`}>
+      <body
+        className={`antialiased bg-white dark:bg-black transition-colors duration-300`}
+        suppressHydrationWarning
+      >
         <GoogleOAuthProvider clientId="25809794192-f8ci3k7nkk4cl2o9t38dtaoujupq6u70.apps.googleusercontent.com">
           <ThemeProvider>{children}</ThemeProvider>
         </GoogleOAuthProvider>
