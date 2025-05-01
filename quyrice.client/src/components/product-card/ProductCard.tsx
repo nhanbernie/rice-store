@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import { COLOR_BUTTON, COLOR_CARD } from '@/colors/common-color.constant'
 import { COMMON_SIZE } from '@/sizes/common-sizes.constant'
 import Icon from '../icons/Icon'
@@ -11,9 +14,22 @@ import {
 import { TitleMotion, BlockMotion } from '@/motions/index'
 import ImgMotion from '../aminations/ImgMotion'
 import CommonButton from '@/components/button/CommonButton'
+import ProductCardSkeleton from '../loading/ProductCardSkeleton'
 
-const ProductCard = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 2000))
+const ProductCard = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return <ProductCardSkeleton />
+  }
 
   return (
     <div className="mb-16">
@@ -22,13 +38,12 @@ const ProductCard = async () => {
         variants={titleAnimation}
         title="LIST PRODUCTS"
       />
-      {/* Grid Container */}
+
       <article className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
         {[...Array(13)].map((_, index) => (
           <BlockMotion
             key={index}
             index={index}
-            // variants={productCardAnimation}
             className="relative pb-12 flex flex-col justify-center items-center rounded-3xl border-[1px] border-slate-100 shadow-lg"
           >
             <div
@@ -37,7 +52,6 @@ const ProductCard = async () => {
               25%
             </div>
 
-            {/* Favourite Button */}
             <CommonButton
               idIcon="heart-icon"
               styleButton="absolute top-8 right-8 z-20 px-0 py-0"
@@ -45,7 +59,7 @@ const ProductCard = async () => {
               {...hoverButton}
               {...tapScale}
             />
-            {/* Product Link */}
+
             <Link href={`/products/${index}`}>
               <div className="text-center">
                 <figure className="w-full aspect-[4/3] mb-5 rounded-t-3xl overflow-hidden">
@@ -65,9 +79,8 @@ const ProductCard = async () => {
               </div>
             </Link>
 
-            {/* Add to Cart Button */}
             <button
-              className={`absolute rounded-full p-3 ${COLOR_BUTTON.ADD_PRODUCT} ${COLOR_BUTTON.HOVER_ADD_PRODUCT} bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition duration-300 shadow-2x`}
+              className={`absolute rounded-full p-3 ${COLOR_BUTTON.ADD_PRODUCT} ${COLOR_BUTTON.HOVER_ADD_PRODUCT} bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition duration-300 shadow-2xl`}
             >
               <Icon className="w-7 h-7 text-white" id="plus-icon" />
             </button>
