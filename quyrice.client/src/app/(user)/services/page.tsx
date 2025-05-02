@@ -15,7 +15,7 @@ const Service = () => {
           src={
             'https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/mexican_rice_89891_16x9.jpg'
           }
-          alt="Quy's Service Image"
+          alt="Quy Service Image"
           className="w-full h-[600px] object-cover"
           width={500}
           height={500}
@@ -65,7 +65,7 @@ const Service = () => {
                   src={
                     'https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/mexican_rice_89891_16x9.jpg'
                   }
-                  alt="Quy's Service Image"
+                  alt="Quys Service Image"
                   className="w-full h-full object-cover"
                   width={500}
                   height={500}
@@ -143,7 +143,7 @@ const Service = () => {
 
               <div className="md:w-1/2">
                 <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">
-                  We're here to assist you with any questions about our products and services. Our
+                  We are here to assist you with any questions about our products and services. Our
                   team is dedicated to providing you with the highest quality rice and excellent
                   customer service.
                 </p>
