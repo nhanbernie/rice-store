@@ -94,35 +94,93 @@ const Service = () => {
             </div>
           </div>
 
-          {/* Delivery */}
-          <div className={`flex flex-row justify-between min-w-full ${COMMON_SIZE.SPACE_BOTTOM}`}>
-            <h1 className="text-6xl font-semibold">
-              Contact Us Here
-              <br />
-              <span className="text-green-900">Rice Store</span>
-            </h1>
+          {/* Contact Us Section */}
+          <div
+            className={`relative py-20 px-8 bg-gradient-to-r from-green-50 to-white dark:from-zinc-900 dark:to-black rounded-3xl shadow-lg ${COMMON_SIZE.SPACE_BOTTOM}`}
+          >
+            <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+              <div className="md:w-1/2">
+                <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+                  Contact Us Here at{' '}
+                  <span className="text-green-900 dark:text-green-500 block mt-2">Rice Store</span>
+                </h1>
+                <div className="mt-8 space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <Icon
+                      id={COMMON_ICON.EmailIcon}
+                      className="w-6 h-6 text-green-800 dark:text-green-500"
+                    />
+                    <p className="text-lg">ricestore@gmail.com</p>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Icon
+                      id={COMMON_ICON.PhoneIcon}
+                      className="w-6 h-6 text-green-800 dark:text-green-500"
+                    />
+                    <p className="text-lg">+84 123 456 789</p>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Icon
+                      id={COMMON_ICON.ShopIcon}
+                      className="w-6 h-6 text-green-800 dark:text-green-500"
+                    />
+                    <p className="text-lg">123 Rice Street, Ho Chi Minh City</p>
+                  </div>
+                </div>
+              </div>
 
-            <div className="flex items-center md:w-[21.5em] lg:w-[56em] w-full">
-              <p className="text-2xl">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugiat
-                laudantium odit reiciendis neque doloremque, corporis, voluptate, maiores ullam iure
-                nulla numquam velit dolores sint reprehenderit. Delectus maxime iusto fugit?
-              </p>
+              <div className="md:w-1/2">
+                <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">
+                  We're here to assist you with any questions about our products and services. Our
+                  team is dedicated to providing you with the highest quality rice and excellent
+                  customer service.
+                </p>
+                <CommonButton
+                  text="Get in touch"
+                  styleButton="mt-8 bg-green-800 hover:bg-green-700 text-white px-8 py-3 rounded-xl transition-all duration-300"
+                  idIcon={COMMON_ICON.EmailIcon}
+                />
+              </div>
             </div>
+
+            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-green-100 dark:bg-green-900/20 rounded-full blur-3xl"></div>
           </div>
 
-          {/*  */}
-          <div className="flex flex-col items-center text-center">
-            <h1 className="text-5xl font-bold mb-6">
-              START YOUR NEW <span className="text-green-900">ADVANTURE</span> <br />
-              AROUND THE WORLD
-            </h1>
-            <div className="w-1/4">
-              <p className="">
-                There are still many amazing destinations scattered around the world, you should try
-                to visit all of them
-              </p>
+          {/* Adventure Section */}
+          <div className="relative py-24 text-center">
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight dark:text-gray-300">
+                START YOUR NEW{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-900 dark:from-green-400 dark:to-green-600">
+                  ADVENTURE
+                </span>{' '}
+                <br />
+                WITH PREMIUM RICE
+              </h1>
+
+              <div className="max-w-2xl mx-auto">
+                <p className="text-lg text-gray-600 dark:text-gray-300">
+                  Experience the finest quality rice from around the world. Our carefully selected
+                  varieties will enhance your culinary adventures and bring authentic flavors to
+                  your table.
+                </p>
+                <div className="mt-10 flex justify-center gap-4">
+                  <CommonButton
+                    text="Explore Products"
+                    styleButton="bg-green-800 hover:bg-green-700 text-white px-8 py-3 rounded-xl transition-all duration-300"
+                    idIcon={COMMON_ICON.SearchIcon}
+                  />
+                  <CommonButton
+                    text="Learn More"
+                    styleButton="border-2 border-green-800 hover:bg-green-50 dark:hover:bg-green-900/20 text-green-800 dark:text-green-500 px-8 py-3 rounded-xl transition-all duration-300"
+                  />
+                </div>
+              </div>
             </div>
+
+            {/* Decorative elements */}
+            <div className="absolute -z-10 top-0 left-0 w-[300px] h-[300px] bg-green-100 dark:bg-green-900/20 rounded-full blur-3xl"></div>
+            <div className="absolute -z-10 bottom-0 right-0 w-[250px] h-[250px] bg-green-50 dark:bg-green-900/10 rounded-full blur-3xl"></div>
           </div>
         </div>
       </div>
