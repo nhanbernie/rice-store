@@ -36,7 +36,7 @@ const Contact = () => {
           ))}
         </div>
       </div>
-      <div className="form md:w-full lg:w-[50em] w-full">
+      <div className="form md:w-full max-md:mb-16 lg:w-[50em] w-full">
         <form className="flex flex-col shadow-2xl px-7 pt-6 pb-10 rounded-3xl ">
           {/* Header */}
           <h2 className="text-4xl font-semibold mb-2">Get in Touch</h2>
