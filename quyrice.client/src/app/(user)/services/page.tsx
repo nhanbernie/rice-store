@@ -4,16 +4,23 @@ import './ServicesPage.scss'
 import Icon from '@/components/icons/Icon'
 import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
 import { COMMON_SIZE } from '@/sizes/common-sizes.constant'
+import Image from 'next/image'
 
 const Service = () => {
   return (
     <div className="service-container mb-16">
       {/* Banner */}
       <div className="relative shadow-2xl">
-        <img
-          src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/mexican_rice_89891_16x9.jpg"
-          alt=""
+        <Image
+          src={
+            'https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/mexican_rice_89891_16x9.jpg'
+          }
+          alt="Quy's Service Image"
           className="w-full h-[600px] object-cover"
+          width={500}
+          height={500}
+          quality={100}
+          priority={true}
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50" />
 
@@ -54,10 +61,15 @@ const Service = () => {
             </div>
             <div className="flex justify-end max-md:hidden w-full">
               <div className="service-history__image transition duration-300 overflow-hidden">
-                <img
-                  src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/mexican_rice_89891_16x9.jpg"
-                  alt=""
+                <Image
+                  src={
+                    'https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/mexican_rice_89891_16x9.jpg'
+                  }
+                  alt="Quy's Service Image"
                   className="w-full h-full object-cover"
+                  width={500}
+                  height={500}
+                  quality={100}
                 />
               </div>
             </div>
