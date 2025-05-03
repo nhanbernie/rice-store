@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback } from 'react'
-import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
-import Icon from '@/components/icons/Icon'
+import Image from 'next/image'
 import styles from '@/app/(user)/products/[id]/ProductGallery.module.css'
 
 interface ProductGalleryProps {
@@ -36,7 +35,6 @@ const ProductGallery = ({ images, aspectRatio = 1 }: ProductGalleryProps) => {
 
   return (
     <div className={styles.galleryContainer}>
-      {/* Main Image */}
       <div
         ref={imageRef}
         className={`relative w-full overflow-hidden bg-gray-100 dark:bg-zinc-900 rounded-2xl 
@@ -46,54 +44,44 @@ const ProductGallery = ({ images, aspectRatio = 1 }: ProductGalleryProps) => {
         onMouseLeave={() => setIsZoomed(false)}
         onMouseMove={handleMouseMove}
       >
-        {/* Loading skeleton */}
         {isLoading && (
           <div className="absolute inset-0 bg-gray-200 dark:bg-zinc-800 animate-pulse" />
         )}
 
-        {/* Main image with zoom effect */}
-        <div
-          className={`w-full h-full transition-transform duration-200 ease-out ${
-            isZoomed ? 'scale-150' : 'scale-100'
-          }`}
+        <Image
+          src={images[selectedImage]}
+          alt={`Product image ${selectedImage + 1}`}
+          fill
+          quality={100}
+          priority={selectedImage === 0}
+          className={`object-cover transition-transform duration-200 ease-out
+            ${isZoomed ? 'scale-150' : 'scale-100'}`}
           style={{
-            backgroundImage: `url(${images[selectedImage]})`,
-            backgroundPosition: isZoomed ? `${zoomPosition.x}% ${zoomPosition.y}%` : 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
+            objectPosition: isZoomed ? `${zoomPosition.x}% ${zoomPosition.y}%` : 'center',
           }}
           onLoad={handleImageLoad}
         />
 
-        {/* Zoom indicator */}
-        {!isZoomed && !isLoading && (
-          <div className="absolute top-4 right-4 bg-white/80 dark:bg-black/80 rounded-full p-2 backdrop-blur-sm">
-            <Icon id={COMMON_ICON.SearchIcon} className="w-5 h-5" />
-          </div>
-        )}
-
-        {/* Zoom overlay */}
         <div className={styles.zoomOverlay} />
       </div>
 
-      {/* Thumbnail Gallery */}
       <div className={`${styles.thumbnailContainer} hide-scrollbar`}>
         {images.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`relative min-w-[80px] aspect-square rounded-lg overflow-hidden transition-all 
-              ${styles.thumbnail} ${selectedImage === index ? styles.active : ''} 
+            className={`relative min-w-[80px] aspect-square rounded-lg overflow-hidden transition-all
+              ${styles.thumbnail} ${selectedImage === index ? styles.active : ''}
               hover:shadow-lg dark:hover:shadow-zinc-800`}
             aria-label={`View image ${index + 1}`}
           >
-            <div
-              className="w-full h-full transition-transform duration-300 hover:scale-110"
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
+            <Image
+              src={image}
+              alt={`Thumbnail ${index + 1}`}
+              fill
+              sizes="80px"
+              quality={100}
+              className="object-cover transition-transform duration-300 hover:scale-110"
             />
           </button>
         ))}
