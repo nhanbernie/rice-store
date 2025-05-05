@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
 import ITexttareaProps from '@/common/models/input/input.model'
 import { useFormContext, useController } from 'react-hook-form'
-import { motion, AnimatePresence } from 'framer-motion' // Add AnimatePresence
+import { motion } from 'framer-motion'
 import ErrorField from './ErrorField'
 
 const Textarea = ({ name, label, placeholder, className }: ITexttareaProps) => {

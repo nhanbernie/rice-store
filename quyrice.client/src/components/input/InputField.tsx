@@ -1,5 +1,5 @@
 'use client'
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import { useFormContext, useController } from 'react-hook-form'
 import { IInputFieldProps } from '@/common/models/input/input.model'
 import Icon from '../icons/Icon'

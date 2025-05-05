@@ -1,8 +1,29 @@
-import React from 'react'
 import { COMMON_SIZE } from '@/sizes/common-sizes.constant'
 import Icon from '@/components/icons/Icon'
 import { COMMON_ICON } from '@/icons/icon.constant'
+import ContactForm from './ContactForm'
+
 const Contact = () => {
+  const type = 'login'
+  const onSubmit = async (data: any) => {
+    console.log('data', data)
+    try {
+      const res = await fetch('http://localhost:1901/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      const result = await res.json()
+      if (result.success === true) {
+        console.log('Login successful')
+      }
+    } catch (err) {
+      console.log('Error: ', err)
+    }
+  }
+
   return (
     <div
       className={`container flex flex-col md:flex-row justify-between mx-auto max-sm:px-4 ${COMMON_SIZE.SPACE_TOP} lg:${COMMON_SIZE.SPACE_TOP_LARGE}`}
@@ -36,33 +57,8 @@ const Contact = () => {
           ))}
         </div>
       </div>
-      <div className="form md:w-full max-md:mb-16 lg:w-[50em] w-full">
-        <form className="flex flex-col shadow-2xl px-7 pt-6 pb-10 rounded-3xl ">
-          {/* Header */}
-          <h2 className="text-4xl font-semibold mb-2">Get in Touch</h2>
-          <p className="text-base text-gray-500 mb-8">We would love to hear from you!</p>
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="border border-gray-300 h-[50px] rounded-full px-5 mb-4"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="border border-gray-300 h-[50px] rounded-full px-5 mb-4"
-          />
-          <textarea
-            placeholder="Your Message"
-            className="border border-gray-300 rounded-3xl px-5 py-5 h-[200px] mb-4"
-          />
-          <button
-            type="submit"
-            className="bg-green-800 text-white rounded-3xl h-[50px] hover:bg-green-900 transition duration-200"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+      {/* Form Section */}
+      <ContactForm />
     </div>
   )
 }
