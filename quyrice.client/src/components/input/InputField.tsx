@@ -4,8 +4,15 @@ import { useFormContext, useController } from 'react-hook-form'
 import { IInputFieldProps } from '@/common/models/input/input.model'
 import Icon from '../icons/Icon'
 import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
+import ErrorField from './ErrorField'
 
-const InputField: FC<IInputFieldProps> = ({ name, label, type = 'text', placeholder = '' }) => {
+const InputField = ({
+  name,
+  label,
+  type = 'text',
+  placeholder = '',
+  className,
+}: IInputFieldProps) => {
   const { control } = useFormContext()
   const {
     field: { value, ...field },
@@ -30,9 +37,9 @@ const InputField: FC<IInputFieldProps> = ({ name, label, type = 'text', placehol
           id={name}
           type={isPasswordType && visible ? 'text' : type}
           placeholder={placeholder}
-          className={`w-full px-6 py-4 pr-10 bg-gray-100 rounded-3xl outline-none ${
+          className={`w-full px-6 py-4 pr-10 bg-gray-100 rounded-3xl outline-none border ${
             error ? 'border-red-500' : 'border-transparent'
-          } focus:ring-green-900 focus:ring-1 transition-transform duration-200`}
+          } focus:ring-green-900 placeholder-gray-400 focus:ring-1 focus:border-green-900 transition-all duration-200 ${className}`}
         />
 
         {isPasswordType && (
@@ -49,7 +56,7 @@ const InputField: FC<IInputFieldProps> = ({ name, label, type = 'text', placehol
         )}
       </div>
 
-      {error && <p className="px-6 mt-2 text-sm text-red-600">{error.message}</p>}
+      <ErrorField error={error} />
     </div>
   )
 }
