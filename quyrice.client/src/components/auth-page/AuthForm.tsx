@@ -1,4 +1,5 @@
 'use client'
+
 import FormProvider from '@/components/form/AuthProvider'
 import validatorSchema from '@/libs/validator/auth.validator'
 import InputField from '@/components/input/InputField'
@@ -9,6 +10,17 @@ import { useRouter } from 'next/navigation'
 
 const AuthForm = ({ type }: IAuthFormProps) => {
   const router = useRouter()
+
+  const BUTTON_TITLE: Record<string, string> = {
+    login: 'Login',
+    register: 'Create now',
+    forgotPassword: 'Reset my password',
+  }
+
+  const titleButton = (type: string): string => {
+    return BUTTON_TITLE[type] || 'Submit'
+  }
+
   const onSubmit = async (data: InferType<(typeof validatorSchema)[typeof type]>) => {
     const dataRegister = {
       name: 'username' in data ? data.username : undefined,
@@ -45,7 +57,7 @@ const AuthForm = ({ type }: IAuthFormProps) => {
         ))}
       </div>
       <button type="submit" className="w-full bg-green-900 text-white py-4 rounded-3xl">
-        Start
+        {titleButton(type)}
       </button>
     </FormProvider>
   )
