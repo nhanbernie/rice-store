@@ -36,7 +36,7 @@ export const authService = {
       throw new Error('Invalid credentials')
     }
 
-    const { password: _, ...userWithoutPassword } = user
+    const { password: undefined, ...userWithoutPassword } = user
     const token = `mock-jwt-token-${user.id}`
 
     // Store in cookies
