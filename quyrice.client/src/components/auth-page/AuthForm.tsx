@@ -46,13 +46,11 @@ const AuthForm = ({ type }: IAuthFormProps) => {
         router.push('/')
       } else if (type === 'register') {
         const registerData = data as RegisterFormData
-        // Implement register logic
-        const dataRegister = {
-          name: registerData.username,
-          password: registerData.password,
-          email: registerData.email,
-        }
-        // API call here
+        // const dataRegister = {
+        //   name: registerData.username,
+        //   password: registerData.password,
+        //   email: registerData.email,
+        // }
         router.push('/login')
       }
     } catch (err) {

@@ -3,11 +3,11 @@ interface LoginCredentials {
   password: string
 }
 
-interface User {
-  id: string
-  email: string
-  role: 'admin' | 'user'
-}
+// interface User {
+//   id: string
+//   email: string
+//   role: 'admin' | 'user'
+// }
 
 // Mock user database
 const MOCK_USERS = [
