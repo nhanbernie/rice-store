@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
+    "@react-oauth/google": "^0.12.1",
+    "@reduxjs/toolkit": "^2.7.0",
     "cookies-next": "^5.1.0",
     "framer-motion": "^12.5.0",
     "motion": "^12.5.0",
@@ -18,8 +20,8 @@
     "react-dom": "^19.0.0",
     "react-error-boundary": "^5.0.0",
     "react-hook-form": "^7.55.0",
-    "yup": "^1.6.1",
-    "@react-oauth/google": "^0.12.1"
+    "react-redux": "^9.2.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
