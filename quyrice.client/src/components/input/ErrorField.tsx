@@ -1,12 +1,9 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-
+import { FieldError } from 'react-hook-form'
 interface IErrorFieldProps {
-  error?: {
-    message?: string
-    [key: string]: any
-  }
+  error?: FieldError
 }
 const ErrorField = ({ error }: IErrorFieldProps) => {
   return (
