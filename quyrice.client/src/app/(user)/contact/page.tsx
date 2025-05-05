@@ -4,26 +4,6 @@ import { COMMON_ICON } from '@/icons/icon.constant'
 import ContactForm from './ContactForm'
 
 const Contact = () => {
-  const type = 'login'
-  const onSubmit = async (data: any) => {
-    console.log('data', data)
-    try {
-      const res = await fetch('http://localhost:1901/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-      const result = await res.json()
-      if (result.success === true) {
-        console.log('Login successful')
-      }
-    } catch (err) {
-      console.log('Error: ', err)
-    }
-  }
-
   return (
     <div
       className={`container flex flex-col md:flex-row justify-between mx-auto max-sm:px-4 ${COMMON_SIZE.SPACE_TOP} lg:${COMMON_SIZE.SPACE_TOP_LARGE}`}

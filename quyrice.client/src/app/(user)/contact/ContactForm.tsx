@@ -5,12 +5,6 @@ import InputField from '@/components/input/InputField'
 import Textarea from '@/components/input/Textarea'
 
 const ContactForm = () => {
-  const inputField = [
-    { name: 'name', type: 'text', placeholder: 'Your Name' },
-    { name: 'email', type: 'email', placeholder: 'Your Email' },
-    { name: 'message', type: 'text', placeholder: 'Your Message' },
-  ]
-
   return (
     <div className="form md:w-full max-md:mb-16 lg:w-[50em] w-full">
       <FormProvider onSubmit={() => {}} validatorSchema={validatorSchema['contact']}>
@@ -19,7 +13,7 @@ const ContactForm = () => {
           <p className="text-base text-gray-500 mb-8">We would love to hear from you!</p>
           <InputField name="name" type="text" placeholder="Your Name" />
           <InputField name="email" type="email" placeholder="Your Email" />
-          <Textarea name='message'placeholder='Send your message' />
+          <Textarea name="message" placeholder="Send your message" />
           <button type="submit" className="w-full mt-4 bg-green-900 text-white py-4 rounded-3xl">
             Start
           </button>
