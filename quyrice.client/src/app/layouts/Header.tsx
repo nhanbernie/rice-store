@@ -7,9 +7,13 @@ import CommonButton from '@/components/button/CommonButton'
 import { HEADER_SIZE } from '@/common/constants/styles/sizes/header-sizes.constant'
 import { usePathname } from 'next/navigation'
 import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
+import ProfileDropdown from '@/components/dropdown/ProfileDropdown'
+import { useAuth } from '@/hooks/useAuth'
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const pathName = usePathname()
+  const { isAuthenticated } = useAuth()
   const isServicesPage = pathName === '/services'
 
   return (
@@ -63,18 +67,23 @@ const Header = () => {
             Contact
           </Link>
         </nav>
-        {/* Theme Toggle */}
+
+        {/* Theme Toggle and Profile */}
         <div className="justify-center items-center space-x-4 hidden md:flex">
           <CommonButton
             idIcon="shopping-cart-icon"
             className="w-5 h-5 text-gray-700 dark:text-gray-300 hover:text-[#2f663c] dark:hover:text-[#4c8f5e] transition-colors duration-300"
           />
-          <Link href="/login">
-            <CommonButton
-              idIcon="account-icon"
-              className="w-5 h-5 text-gray-700 dark:text-gray-300 hover:text-[#2f663c] dark:hover:text-[#4c8f5e] transition-colors duration-300"
-            />
-          </Link>
+          {isAuthenticated ? (
+            <ProfileDropdown />
+          ) : (
+            <Link href="/login">
+              <CommonButton
+                idIcon="account-icon"
+                className="w-5 h-5 text-gray-700 dark:text-gray-300 hover:text-[#2f663c] dark:hover:text-[#4c8f5e] transition-colors duration-300"
+              />
+            </Link>
+          )}
           <ThemeToggleButton />
         </div>
 
@@ -146,7 +155,21 @@ const Header = () => {
             Contact
           </Link>
 
-          {/* Theme Toggle Mobile */}
+          {/* Mobile Profile/Theme Section */}
+          <div className="pt-4 border-t border-gray-200 dark:border-zinc-700">
+            {isAuthenticated ? (
+              <ProfileDropdown />
+            ) : (
+              <Link
+                href="/login"
+                className="block py-2 hover:text-gray-300 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Login
+              </Link>
+            )}
+          </div>
+
           <ThemeToggleButton />
         </div>
       </div>
