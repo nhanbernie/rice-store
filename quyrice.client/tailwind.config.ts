@@ -61,6 +61,7 @@ export default {
     // 📐 (Width & Max Width)
     'w-full',
     'max-w-screen-2xl',
+    'h-[200px]',
 
     // 🔤 (Font Weight)
     'font-bold',
