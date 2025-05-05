@@ -2,7 +2,7 @@ export const ERROR_MESSAGE = {
   EM001: 'useTheme must be used within a ThemeProvider',
 }
 
-export const AUTH_ERROR_MESSAGE = {
+export const AUTH_FORM_ERROR_MESSAGES = {
   EMU001: 'Invalid email format',
   EMU002: 'Email is required',
   EMU003: 'Password must be at least 12 characters',
@@ -19,5 +19,7 @@ export const AUTH_ERROR_MESSAGE = {
   EMU014: 'New password is required',
   EMU015: 'New password must be different from current password',
   EMU016: 'Confirm password is required',
-  EMU017: 'Passwords must match'
+  EMU017: 'Passwords must match',
+  EMU018: 'Your name is required',
+  EMU019: 'Your message is required',
 }
