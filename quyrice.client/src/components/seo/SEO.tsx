@@ -1,8 +1,8 @@
+"use server"
 import Head from 'next/head'
-import React from 'react'
-import { SeoItems } from '@/common/models/seo/seo.model'
-
-const SEO: React.FC<SeoItems> = ({
+import { ISeoItems } from '@/common/models/seo/seo.model'
+import { Metadata, ResolvedMetadata } from 'next'
+const SEO = ({
   title,
   description,
   keywords,
@@ -11,7 +11,7 @@ const SEO: React.FC<SeoItems> = ({
   url,
   type,
   twitterUsername,
-}) => {
+}: ISeoItems) => {
   return (
     <Head>
       <meta charSet="UTF-8" />
