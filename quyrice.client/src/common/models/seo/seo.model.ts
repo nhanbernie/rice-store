@@ -1,8 +1,8 @@
 export interface SeoType {
-  [key: string]: Partial<SeoItems>
+  [key: string]: Partial<ISeoItems>
 }
 
-export interface SeoItems {
+export interface ISeoItems {
   title: string
   description: string
   keywords: string
