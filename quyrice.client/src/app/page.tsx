@@ -3,7 +3,7 @@ import HeroSession from '@/components/hero-session/HeroSession'
 import { Body, MainLayout } from './layouts'
 import ServiceHomepage from '@/components/service/ServiceHomepage'
 import { Suspense } from 'react'
-import ProductCard from '@/components/product-card/ProductCard'
+import ProductCard from '@/components/product/ProductPageSection'
 import ProductCardSkeleton from '@/components/loading/ProductCardSkeleton'
 import ServiceHomepageSkeleton from '@/components/loading/ServiceHomepageSkeleton'
 

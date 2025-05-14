@@ -1,21 +1,20 @@
-'use client'
+'use server'
 
 import { Body } from '@/app/layouts'
 import CommonButton from '@/components/button/CommonButton'
 import { COMMON_ICON } from '@/common/constants/styles/icons/icon.constant'
 import Icon from '@/components/icons/Icon'
-import ProductCard from '@/components/product-card/ProductCard'
+import ProductPageSection from '@/components/product/ProductPageSection'
 import ProductGallery from '@/components/product-gallery/ProductGallery'
 
 const ProductDetail = () => {
-  // Sample product images - replace with your actual product images
   const productImages = [
     'https://images.unsplash.com/photo-1741850820683-b25798ff3164?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     'https://c4.wallpaperflare.com/wallpaper/382/296/41/nature-food-wallpaper-preview.jpg',
     'https://media.gettyimages.com/id/1370684454/video/jasmine-brown-rice-pouring-from-wooden-spoon.jpg?s=640x640&k=20&c=ax7gsBoRci0qhUWYXOcisNchLzNoTijLGqnAySgdoMc=',
     'https://t4.ftcdn.net/jpg/00/91/51/91/360_F_91519135_DlbNcDSnqJAbD53UKqkddnFg0LV2gKSj.jpg',
   ]
-
+  // Product details
   return (
     <Body>
       <div className="container mx-auto px-4 lg:px-8 py-16">
@@ -112,7 +111,7 @@ const ProductDetail = () => {
         </div>
       </div>
       <div className="mt-16">
-        <ProductCard />
+        <ProductPageSection />
       </div>
     </Body>
   )
