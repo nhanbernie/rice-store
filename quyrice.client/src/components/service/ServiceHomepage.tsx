@@ -25,4 +25,4 @@ const ServiceHomepage = async () => {
   )
 }
 
-export default ServiceHomepage
+export default ServiceHomepage    

@@ -1,10 +1,9 @@
-"use client"
+'use client'
 
 import { motion } from 'framer-motion'
-import React from 'react'
 import { ImgMotionProps } from '@/common/models/animations/animation.modal'
 
-const ImgMotion: React.FC<ImgMotionProps> = ({
+const ImgMotion = ({
   src,
   className,
   altImg,
@@ -15,7 +14,7 @@ const ImgMotion: React.FC<ImgMotionProps> = ({
   whileHover,
   transition,
   ...rest
-}) => {
+}: ImgMotionProps) => {
   return (
     <motion.img
       src={src}
