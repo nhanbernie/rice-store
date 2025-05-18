@@ -6,7 +6,7 @@ import Icon from '@/components/icons/Icon'
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-[#292929] rounded-t-2xl">
+    <footer className="bg-white dark:bg-[#292929] rounded-t-2xl p-5">
       <div className={`w-full lg:${COMMON_SIZE.PY}`}>
         {/* Top footer */}
         <div className="container mx-auto max-sm:px-4 grid grid-cols-1 gap-8 lg:grid-cols-2">

@@ -10,7 +10,7 @@ const MainLayout = ({ children }: ChildrenProps) => {
 
   return (
       <div className="flex flex-col flex-wrap min-h-screen">
-        <div className={`${isServicesPage ? 'w-full' : 'container max-w-screen-2xl mx-auto'}`}>
+        <div className={`${isServicesPage ? 'w-full' : 'container max-w-screen-2xl mx-auto p-5'}`}>
           <Header />
           <main
             className={`flex-grow max-sm:px-4 ${pathName !== '/services' ? 'mt-[76px]' : 'mt-0'}`}
