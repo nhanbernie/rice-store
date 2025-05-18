@@ -23,3 +23,4 @@ export const AUTH_FORM_ERROR_MESSAGES = {
   EMU018: 'Your name is required',
   EMU019: 'Your message is required',
 }
+  

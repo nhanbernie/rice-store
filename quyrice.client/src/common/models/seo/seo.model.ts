@@ -11,4 +11,23 @@ export interface ISeoItems {
   author?: string
   type?: string
   twitterUsername?: string
+  openGraph?: {
+    title?: string
+    description?: string
+    images?: string
+    url?: string
+    type?: string
+  }
+}
+
+export interface ISeoMetadata {
+  type: string
+  data: {
+    slug: string
+    name?: string
+    title?: string
+    shortDescription?: string
+    description?: string
+    images?: Array<{ url: string }>
+  }
 }

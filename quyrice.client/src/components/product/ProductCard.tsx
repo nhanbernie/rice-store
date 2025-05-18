@@ -1,4 +1,4 @@
-'use client'
+'use server'
 
 import { BlockMotion } from '@/motions/index'
 import CommonButton from '@/components/button/CommonButton'
@@ -36,7 +36,7 @@ const ProductCard = ({ index }: ProductCardProps) => {
         {...tapScale}
       />
 
-      <Link href={`/products/${index}`}>
+      <Link href={`/products/${'premium-japanese-rice'}`} className="w-full">
         <div className="text-center">
           <figure className="w-full aspect-[4/3] mb-5 rounded-t-3xl overflow-hidden">
             <ImgMotion

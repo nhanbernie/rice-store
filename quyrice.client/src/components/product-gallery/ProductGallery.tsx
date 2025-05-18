@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react'
 import Image from 'next/image'
-import styles from '@/app/(user)/products/[id]/ProductGallery.module.css'
+import styles from '@/app/(user)/products/[slug]/ProductGallery.module.css'
 
 interface ProductGalleryProps {
   images: string[]
