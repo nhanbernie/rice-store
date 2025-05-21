@@ -55,3 +55,7 @@ export const authService = {
     document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT'
   },
 }
+
+export const getProducts = async () => {
+  return await fetch('http://localhost:1901/api/products').then((res) => res.json())
+}

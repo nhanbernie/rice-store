@@ -6,7 +6,8 @@ import { TitleMotion } from '@/motions/index'
 import ProductCard from './ProductCard'
 
 const ProductPageSection = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 2000))
+  const res = await fetch('http://localhost:1901/api/products').then((res) => res.json())
+  const listProducts = res?.data?.products
 
   return (
     <div className="mb-16">
@@ -17,8 +18,8 @@ const ProductPageSection = async () => {
       />
 
       <article className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-        {[...Array(13)].map((_, index) => (
-          <ProductCard index={index} key={index} />
+        {listProducts?.map((product: any, index: number) => (
+          <ProductCard index={index} key={index} products={product} />
         ))}
       </article>
     </div>

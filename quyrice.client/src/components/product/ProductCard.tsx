@@ -12,11 +12,22 @@ import {
 import ImgMotion from '../aminations/ImgMotion'
 import Icon from '../icons/Icon'
 
-interface ProductCardProps {
+interface IProductCardItemsProps {
+  thumbnail?: {
+    url: string
+  }
+  altImage?: string
+  name?: string
+  slug?: string
+  price?: number
+  discountPercentage?: number
+}
+interface IProductCardProps {
   index: number
+  products?: IProductCardItemsProps
 }
 
-const ProductCard = ({ index }: ProductCardProps) => {
+const ProductCard = ({ index, products }: IProductCardProps) => {
   return (
     <BlockMotion
       index={index}
@@ -25,7 +36,7 @@ const ProductCard = ({ index }: ProductCardProps) => {
       <div
         className={`absolute top-8 left-8 ${COLOR_BUTTON.ADD_PRODUCT} text-white text-base font-bold px-3 py-1 rounded-2xl z-10`}
       >
-        25%
+        {products?.discountPercentage}%
       </div>
 
       <CommonButton
@@ -36,21 +47,21 @@ const ProductCard = ({ index }: ProductCardProps) => {
         {...tapScale}
       />
 
-      <Link href={`/products/${'premium-japanese-rice'}`} className="w-full">
+      <Link href={`/products/${products?.slug}`} className="w-full">
         <div className="text-center">
           <figure className="w-full aspect-[4/3] mb-5 rounded-t-3xl overflow-hidden">
             <ImgMotion
-              src="https://www.allrecipes.com/thmb/RKpnSHLUDT2klppYgx8jAF47GyM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/52490-PuertoRicanSteamedRice-DDMFS-061-4x3-3c3da714aa614037ad1c135ec303526d.jpg"
-              className="w-full"
+              src={products?.thumbnail?.url}
+              className="w-full h-full object-cover"
               {...hoverImage}
             />
           </figure>
 
           <header className="text-center mb-2">
-            <h2 className={`${COLOR_CARD.TEXT_PRODUCT} text-lg`}>Light Wooden Chair</h2>
+            <h2 className={`${COLOR_CARD.TEXT_PRODUCT} text-lg`}>{products?.name}</h2>
           </header>
           <p className={`${COLOR_CARD.TEXT_PRICE} font-bold text-xl`} aria-label="Price">
-            $34.00
+            ${products?.price}
           </p>
         </div>
       </Link>
