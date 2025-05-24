@@ -6,9 +6,23 @@ import { TitleMotion } from '@/motions/index'
 import ProductCard from './ProductCard'
 
 const ProductPageSection = async () => {
-  const res = await fetch('http://localhost:1901/api/products').then((res) => res.json())
-  const listProducts = res?.data?.products
+  let listProducts: any[] | null = null
 
+  try {
+    const res = await fetch('http://localhost:1901/api/products', {
+      next: { revalidate: 60 },
+    })
+
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`)
+    }
+
+    const data = await res.json()
+    listProducts = data?.data?.products || []
+  } catch (error) {
+    console.error('Lỗi khi gọi API:', error)
+    listProducts = null
+  }
   return (
     <div className="mb-16">
       <TitleMotion
@@ -18,9 +32,13 @@ const ProductPageSection = async () => {
       />
 
       <article className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-        {listProducts?.map((product: any, index: number) => (
-          <ProductCard index={index} key={index} products={product} />
-        ))}
+        {listProducts ? (
+          listProducts.map((product: any, index: number) => (
+            <ProductCard index={index} key={index} products={product} />
+          ))
+        ) : (
+          <p>Not found</p>
+        )}
       </article>
     </div>
   )
