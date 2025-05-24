@@ -57,5 +57,10 @@ export const authService = {
 }
 
 export const getProducts = async () => {
-  return await fetch('http://localhost:1901/api/products').then((res) => res.json())
+  try {
+    const res = await fetch('http://localhost:1901/api/products').then((res) => res.json())
+    return res
+  } catch (error) {
+    console.log(error)
+  }
 }
